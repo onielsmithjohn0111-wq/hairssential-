@@ -1,1 +1,108 @@
-https://019d03de-d79d-7352-bc01-9e8f1dda4dd1.codepenusercontent.com/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Cut | Premium Barbershop</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container navbar">
+            <div class="logo">THE DAILY <span>CUT</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#hero" onclick="showSection('hero')">Home</a></li>
+                    <li><a href="#about" onclick="showSection('about')">About</a></li>
+                    <li><a href="#services" onclick="showSection('services')">Services</a></li>
+                    <li><a href="#book" class="btn-nav" onclick="showSection('book')">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="content-section hero-section active">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1>Look Sharp. Feel Confident.</h1>
+                <p>Premium haircuts, classic shaves, and top-tier grooming tailored precisely for you.</p>
+                <a href="#book" class="btn-primary" onclick="showSection('book')">Book an Appointment</a>
+            </div>
+        </section>
+
+        <section id="about" class="content-section about-section">
+            <div class="container">
+                <h2>Our Philosophy</h2>
+                <p>We believe a haircut is more than just a routine maintenance task—it’s an experience. Our master barbers combine classic time-tested techniques with modern styling trends to ensure you walk out looking like the absolute best version of yourself.</p>
+            </div>
+        </section>
+
+        <section id="services" class="content-section services-section">
+            <div class="container">
+                <h2 class="section-title">Services & Pricing</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h3>Classic Haircut</h3>
+                        <p class="price">$35</p>
+                        <p>A tailored cut execution including a hot towel finish and premium styling product application.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Beard Trim & Lineup</h3>
+                        <p class="price">$25</p>
+                        <p>Precision beard shaping, conditioning, and straight-razor edge cleanup.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>The Signature Combo</h3>
+                        <p class="price">$55</p>
+                        <p>Our classic haircut combined with full beard grooming and a relaxing hot towel treatment.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Hot Towel Shave</h3>
+                        <p class="price">$40</p>
+                        <p>Traditional straight-razor shave with pre-shave oils, hot towels, and soothing aftershave lotions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="book" class="content-section booking-section">
+            <div class="container booking-content">
+                <h2>Ready for a Fresh Cut?</h2>
+                <p>Give us a call or visit us directly to claim your spot in the chair.</p>
+                <div class="info-box">
+                    <p><strong>Phone:</strong> (555) 123-4567</p>
+                    <p><strong>Address:</strong> 123 Main Street, Downtown</p>
+                    <p><strong>Hours:</strong> Mon - Sat: 9:00 AM - 8:00 PM | Sun: Closed</p>
+                </div>
+                <br>
+                <a href="tel:5551234567" class="btn-secondary">Call to Book Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 The Daily Cut. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all content sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the selected section
+            const activeSection = document.getElementById(sectionId);
+            if (activeSection) {
+                activeSection.classList.add('active');
+            }
+        }
+    </script>
+</body>
+          </html>
